@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "361935563300",
+    "project_id": "assignmentauth-4cf64",
+    "storage_bucket": "assignmentauth-4cf64.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361935563300:android:45b082c7633e4595ea06b1",
+        "android_client_info": {
+          "package_name": "com.example.holiday"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361935563300-mv3h89297u5onkob49i6t9mt68sodsdh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxpm3lrSjQi82_Tsq_c6KSTerzqYpNhUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361935563300-mv3h89297u5onkob49i6t9mt68sodsdh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
