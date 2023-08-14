@@ -39,11 +39,10 @@
         android:layout_width="match_parent"
         android:layout_height="150px"
         android:layout_marginTop="50px"
-        android:hint="Username"
+        android:hint="Email"
         android:padding="20px"
         android:background="@drawable/rounded"
         android:id="@+id/usernmae"
-        android:inputType="textEmailAddress"
         android:singleLine="false"
         />
 
@@ -65,6 +64,7 @@
         android:text="Login"
         android:fontFamily="sans-serif-condensed"
         android:textSize="20sp"
+        android:id="@+id/login"
         android:textAllCaps="false"
         android:background="@drawable/rounded"
         android:textStyle="bold"
@@ -77,6 +77,30 @@
         android:layout_marginTop="50px"
         android:visibility="gone"
         />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="20px"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:text="New to app?"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Register"
+                    android:id="@+id/register"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
 
         </LinearLayout>
     </ScrollView>
