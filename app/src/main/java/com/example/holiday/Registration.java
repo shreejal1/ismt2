@@ -66,14 +66,17 @@ public class Registration extends AppCompatActivity {
         firebaseAuth.createUserWithEmailAndPassword(email, pass).addOnCompleteListener(Registration.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                progress(false);
                 if(task.isSuccessful()){
-                    Toast.makeText(Registration.this, "Account created, check email to verify", Toast.LENGTH_SHORT).show();
+                    Utility.showToast(Registration.this, "Account created, check email to verify");
+                   // Toast.makeText(Registration.this, "Account created, check email to verify", Toast.LENGTH_SHORT).show();
                     firebaseAuth.getCurrentUser().sendEmailVerification();
                     firebaseAuth.signOut();
                     finish();
                 }
                 else{
-                    Toast.makeText(Registration.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    Utility.showToast(Registration.this, task.getException().getLocalizedMessage());
+                    //Toast.makeText(Registration.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
 
                 }
             }

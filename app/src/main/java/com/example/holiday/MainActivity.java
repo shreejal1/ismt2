@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
 
 
@@ -34,9 +37,12 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.setExitFadeDuration(3000);
         animationDrawable.start();
 
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
 
 
 
+
+        login = findViewById(R.id.login);
         register = findViewById(R.id.register);
         register.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,13 +52,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        login = findViewById(R.id.login);
-        login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent it = new Intent(MainActivity.this, Login.class);
-                startActivity(it);
-            }
-        });
+
+
+        if(currentUser==null){
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent it = new Intent(MainActivity.this, Login.class);
+                    startActivity(it);
+                }
+            });
+        }else{
+            login.setText("Login with previous account");
+            Intent it = new Intent(MainActivity.this, HomePage.class);
+            startActivity(it);
+            finish();
+        }
+
     }
 }
