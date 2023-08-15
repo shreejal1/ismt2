@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button register;
     TextView login;
+    String useremail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         //fulscreen mode in phone
@@ -38,7 +39,10 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.start();
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        String useremail = currentUser.getEmail();
+        if(currentUser!=null) {
+             useremail = currentUser.getEmail();
+        }
+
 
 
 

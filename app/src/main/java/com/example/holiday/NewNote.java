@@ -3,6 +3,7 @@ package com.example.holiday;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -38,6 +39,20 @@ public class NewNote extends AppCompatActivity {
         pagetitle = findViewById(R.id.pagetitle);
         deletebtn = findViewById(R.id.deletebtn);
 
+        Intent intent = getIntent();
+        String action = intent.getAction();
+        String type = intent.getType();
+
+        if(Intent.ACTION_SEND.equals(action) && type != null && "text/plain".equals(type)){
+            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+            if(sharedText != null){
+                notecontent.setText(sharedText);
+            }
+        }
+
+
+
+
         title = getIntent().getStringExtra("title");
         pric = getIntent().getStringExtra("price");
         content = getIntent().getStringExtra("content");
@@ -46,7 +61,7 @@ public class NewNote extends AppCompatActivity {
             isedit = true;
         }
 
-        Utility.showToast(NewNote.this, "docid is "+ docid);
+//        Utility.showToast(NewNote.this, "docid is "+ docid);
 
         notetitle.setText(title);
         price.setText(pric);
