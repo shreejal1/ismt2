@@ -11,16 +11,16 @@
     android:padding="20px"
     >
 
-    <pl.droidsonroids.gif.GifImageView
+    <ImageView
         android:id="@+id/gifImageView"
-        android:layout_width="350dp"
-        android:layout_height="387dp"
-        android:src="@drawable/logo"
+        android:layout_width="209dp"
+        android:layout_height="202dp"
+        android:src="@drawable/front"
         app:layout_constraintBottom_toTopOf="@+id/login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.597" />
+        app:layout_constraintVertical_bias="0.425" />
 
     <Button
         android:id="@+id/register"

@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         animationDrawable.start();
 
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        String useremail = currentUser.getEmail();
 
 
 
@@ -63,10 +64,16 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }else{
-            login.setText("Login with previous account");
-            Intent it = new Intent(MainActivity.this, HomePage.class);
-            startActivity(it);
-            finish();
+            login.setText("Login as "+ useremail);
+            login.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent it = new Intent(MainActivity.this, HomePage.class);
+                    startActivity(it);
+                    finish();
+                }
+            });
+
         }
 
     }
