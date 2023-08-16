@@ -1,10 +1,13 @@
 package com.example.holiday;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.DownloadManager;
+import android.content.ClipData;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -37,7 +40,6 @@ public class HomePage extends AppCompatActivity {
         menu.setOnClickListener(v-> showMenu());
         recviewsetup();
 
-
     }
     void showMenu(){
         PopupMenu popupMenu = new PopupMenu(HomePage.this, menu);
@@ -64,7 +66,11 @@ public class HomePage extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         adapterNote = new AdapterNote(options, this);
         recyclerView.setAdapter(adapterNote);
+
     }
+
+
+
 
     @Override
     protected void onStart() {

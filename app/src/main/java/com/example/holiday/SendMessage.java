@@ -20,6 +20,7 @@ public class SendMessage extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 0 ;
     ImageButton sendmsg;
     EditText number, smscontent;
+    String permission[] = {"android.permission.SEND_SMS"};
 
 
     @Override
@@ -30,6 +31,8 @@ public class SendMessage extends AppCompatActivity {
         number = findViewById(R.id.number);
         sendmsg = findViewById(R.id.sendmsg);
 
+
+
         String cont = "Title: "+getIntent().getStringExtra("title")+"\nPrice: Rs."+getIntent().getStringExtra("price")+"\nDescription: "+getIntent().getStringExtra("content");
 
         smscontent = findViewById(R.id.smscontent);
@@ -38,7 +41,24 @@ public class SendMessage extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if(requestCode==100){
+            if(grantResults[0]==PackageManager.PERMISSION_GRANTED){
+
+            }else{
+                Utility.showToast(SendMessage.this, "Cannot send message");
+                return;
+            }
+        }
+    }
+
     void sendSMS(){
+
+        requestPermissions(permission, 100);
+
         String con = smscontent.getText().toString();
         String numb = number.getText().toString().trim();
         if(numb.length()>10 || numb.length()<10){
