@@ -23,7 +23,7 @@ public class NewNote extends AppCompatActivity {
     ImageButton savenote, deletebtn;
     ProgressBar progress;
     TextView pagetitle;
-    String title, pric, content, docid;
+    String title, pric, content, docid, url;
 
     boolean isedit = false;
     @Override
@@ -39,16 +39,16 @@ public class NewNote extends AppCompatActivity {
         pagetitle = findViewById(R.id.pagetitle);
         deletebtn = findViewById(R.id.deletebtn);
 
-        Intent intent = getIntent();
-        String action = intent.getAction();
-        String type = intent.getType();
+//        Intent intent = getIntent();
+//        String action = intent.getAction();
+//        String type = intent.getType();
 
-        if(Intent.ACTION_SEND.equals(action) && type != null && "text/plain".equals(type)){
-            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
-            if(sharedText != null){
-                notecontent.setText(sharedText);
-            }
-        }
+//        if(Intent.ACTION_SEND.equals(action) && type != null && "text/plain".equals(type)){
+//            String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+//            if(sharedText != null){
+//                notecontent.setText(sharedText);
+//            }
+//        }
 
 
 
@@ -57,6 +57,14 @@ public class NewNote extends AppCompatActivity {
         pric = getIntent().getStringExtra("price");
         content = getIntent().getStringExtra("content");
         docid = getIntent().getStringExtra("docid");
+
+        //
+
+
+        url = getIntent().getStringExtra("url");
+
+        //
+
         if(docid!=null && !docid.isEmpty()){
             isedit = true;
         }
@@ -66,6 +74,10 @@ public class NewNote extends AppCompatActivity {
         notetitle.setText(title);
         price.setText(pric);
         notecontent.setText(content);
+
+        if(url != null && !url.isEmpty()) {
+            notecontent.setText("Available at: " + url + "\n");
+        }
 
         if(isedit){
             pagetitle.setText("Edit your note");

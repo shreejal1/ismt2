@@ -44,14 +44,19 @@ public class HomePage extends AppCompatActivity {
     void showMenu(){
         PopupMenu popupMenu = new PopupMenu(HomePage.this, menu);
         popupMenu.getMenu().add("Logout");
+        popupMenu.getMenu().add("About");
         popupMenu.show();
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 if(menuItem.getTitle()=="Logout"){
                     FirebaseAuth.getInstance().signOut();
-                    startActivity(new Intent(HomePage.this, Login.class));
+                    startActivity(new Intent(HomePage.this, MainActivity.class));
                     finish();
+                    return true;
+                }
+                if(menuItem.getTitle()=="About"){
+                    startActivity(new Intent(HomePage.this, AboutApp.class));
                     return true;
                 }
                 return false;
