@@ -1,4 +1,4 @@
-package com.example.holiday;
+package com.example.suitcase;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.example.holiday;
+package com.example.suitcase;
 
 import android.content.Context;
 import android.widget.Toast;

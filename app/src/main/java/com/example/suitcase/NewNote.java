@@ -1,9 +1,8 @@
-package com.example.holiday;
+package com.example.suitcase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -14,8 +13,6 @@ import android.widget.TextView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.DocumentReference;
-
-import org.w3c.dom.Document;
 
 public class NewNote extends AppCompatActivity {
 

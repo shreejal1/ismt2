@@ -1,4 +1,4 @@
-package com.example.holiday;
+package com.example.suitcase;
 
 public class Note {
 

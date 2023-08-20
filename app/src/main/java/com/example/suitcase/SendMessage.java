@@ -1,10 +1,8 @@
 
-package com.example.holiday;
+package com.example.suitcase;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -13,8 +11,6 @@ import android.telephony.SmsManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
-
-import kotlinx.coroutines.channels.Send;
 
 public class SendMessage extends AppCompatActivity {
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 0 ;

@@ -1,15 +1,11 @@
-package com.example.holiday;
-
-import static androidx.core.content.ContextCompat.startActivity;
+package com.example.suitcase;
 
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -19,7 +15,6 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 
 public class AdapterNote extends FirestoreRecyclerAdapter<Note, AdapterNote.NoteViewHolder> {
