@@ -88,7 +88,7 @@ public class AdapterNote extends FirestoreRecyclerAdapter<Note, AdapterNote.Note
         });
 
         //to edit the item
-        holder.itemView.setOnClickListener((v)-> {
+        holder.edit.setOnClickListener((v)-> {
             Intent intent = new Intent(context, NewNote.class);
             intent.putExtra("title", note.title);
             intent.putExtra("price", note.price);
@@ -108,7 +108,7 @@ public class AdapterNote extends FirestoreRecyclerAdapter<Note, AdapterNote.Note
 
     class NoteViewHolder extends RecyclerView.ViewHolder {
         TextView titlev, prv, contv;
-        ImageButton cart, tick, send;
+        ImageButton cart, tick, send,edit;
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -120,6 +120,7 @@ public class AdapterNote extends FirestoreRecyclerAdapter<Note, AdapterNote.Note
             cart = itemView.findViewById(R.id.cart);
             tick = itemView.findViewById(R.id.tick);
             send = itemView.findViewById(R.id.send);
+            edit = itemView.findViewById(R.id.edit);
 
         }
     }

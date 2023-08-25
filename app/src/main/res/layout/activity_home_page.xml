@@ -7,7 +7,7 @@
     tools:context=".HomePage"
     android:orientation="vertical"
     android:padding="20dp"
-    android:background="@drawable/back2"
+    android:background="@drawable/back1"
     >
 
     <RelativeLayout

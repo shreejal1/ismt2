@@ -38,7 +38,6 @@ public class HomePage extends AppCompatActivity {
     void showMenu(){
         PopupMenu popupMenu = new PopupMenu(HomePage.this, menu);
         popupMenu.getMenu().add("Logout");
-        popupMenu.getMenu().add("About");
         popupMenu.show();
         popupMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
             @Override
@@ -49,10 +48,7 @@ public class HomePage extends AppCompatActivity {
                     finish();
                     return true;
                 }
-                if(menuItem.getTitle()=="About"){
-                    startActivity(new Intent(HomePage.this, AboutApp.class));
-                    return true;
-                }
+
                 return false;
 
             }
