@@ -9,31 +9,37 @@
     android:background="@drawable/back1"
     android:padding="40px"
     >
-    <ImageView
-        android:layout_width="250px"
-        android:layout_height="250px"
-        android:src="@drawable/login"
-        android:layout_gravity="center"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Login"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:textColor="#fff"
-        android:layout_marginBottom="200px"
-        />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250px"
+            android:layout_height="250px"
+            android:layout_gravity="center"
+            android:layout_marginTop="76dp"
+            android:src="@drawable/login" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Login"
+            android:textColor="#000000"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         >
         <LinearLayout
+            android:id="@+id/loginlv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="20dp"
             >
     <EditText
         android:layout_width="match_parent"
