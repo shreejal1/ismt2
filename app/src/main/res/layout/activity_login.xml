@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Login"
     android:orientation="vertical"
-    android:background="@drawable/back1"
+    android:background="@drawable/back2"
     android:padding="40px"
     >
 
@@ -24,6 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="Login"
             android:textColor="#000000"
             android:textSize="50sp"
@@ -47,9 +48,10 @@
         android:layout_marginTop="50px"
         android:hint="Email"
         android:padding="20px"
+        android:fontFamily="sans-serif-smallcaps"
         android:background="@drawable/rounded"
         android:id="@+id/usernmae"
-        android:singleLine="false"
+        android:singleLine="true"
         />
 
     <EditText
@@ -61,14 +63,14 @@
         android:id="@+id/password"
         android:background="@drawable/rounded"
         android:inputType="textPassword"
-        android:singleLine="false"
+        android:singleLine="true"
         />
     <Button
         android:layout_width="match_parent"
         android:layout_height="150px"
         android:layout_marginTop="50px"
         android:text="Login"
-        android:fontFamily="sans-serif-condensed"
+        android:fontFamily="sans-serif-smallcaps"
         android:textSize="20sp"
         android:id="@+id/login"
         android:textAllCaps="false"
@@ -96,12 +98,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20sp"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:text="New to app?"
                     />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text=" Register"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:id="@+id/register"
                     android:textSize="20sp"
                     android:textStyle="bold"

@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Registration"
     android:orientation="vertical"
-    android:background="@drawable/back1"
+    android:background="@drawable/back2"
     android:padding="40px"
     >
 
@@ -19,14 +19,12 @@
         android:layout_marginTop="76dp"
         android:src="@drawable/register" />
 
-
-
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Register"
         android:textColor="#000000"
         android:textSize="50sp"
@@ -48,6 +46,7 @@
         android:layout_height="150px"
         android:background="@drawable/rounded"
         android:hint="Email"
+        android:fontFamily="sans-serif-smallcaps"
         android:padding="20px"
         android:singleLine="true"
         android:inputType="textEmailAddress" />
@@ -75,9 +74,6 @@
         android:layout_marginTop="20px"
         android:singleLine="true" />
 
-
-
-
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"
@@ -90,27 +86,36 @@
         android:textSize="20sp"
         android:textStyle="bold"
  />
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="150px"
+                android:id="@+id/progress"
+                android:layout_gravity="center"
+                android:layout_marginTop="50px"
+                android:visibility="gone"
+                />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:layout_marginTop="20px"
+        android:layout_marginTop="20dp"
         >
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Already have an account?"
+        android:text="Already a member?"
+        android:fontFamily="sans-serif-smallcaps"
         android:textSize="20sp"/>
-
 
     <TextView
         android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text=" Login"
+        android:fontFamily="sans-serif-smallcaps"
         android:textSize="20sp"
         android:textStyle="bold" />
 
